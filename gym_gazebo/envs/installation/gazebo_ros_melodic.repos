@@ -1,8 +1,12 @@
 repositories:
-  ar_track_alvar:
+  nerian_stereo:
     type: git
-    url: https://github.com/ros-perception/ar_track_alvar
-    version: melodic-devel
+    url: https://github.com/nerian-vision/nerian_stereo.git
+    version: master
+  ainstein_radar:
+    type: git
+    url: https://github.com/AinsteinAI/ainstein_radar.git
+    version: master
   catkin_simple:
     type: git
     url: https://github.com/catkin/catkin_simple.git
@@ -10,7 +14,7 @@ repositories:
   control_toolbox:
     type: git
     url: https://github.com/ros-controls/control_toolbox.git
-    version: indigo-devel
+    version: melodic-devel
   ecl_core:
     type: git
     url: https://github.com/stonier/ecl_core
@@ -46,15 +50,15 @@ repositories:
   joystick_drivers:
     type: git
     url: https://github.com/ros-drivers/joystick_drivers.git
-    version: indigo-devel
+    version: melodic-devel
   kobuki:
     type: git
     url: https://github.com/yujinrobot/kobuki
-    version: indigo
+    version: melodic
   kobuki_core:
     type: git
     url: https://github.com/yujinrobot/kobuki_core
-    version: indigo
+    version: melodic
   kobuki_desktop:
     type: git
     url: https://github.com/yujinrobot/kobuki_desktop
@@ -62,7 +66,7 @@ repositories:
   kobuki_msgs:
     type: git
     url: https://github.com/yujinrobot/kobuki_msgs
-    version: indigo
+    version: melodic
   navigation:
     type: git
     url: https://github.com/ros-planning/navigation
@@ -86,7 +90,7 @@ repositories:
   turtlebot:
     type: git
     url: https://github.com/turtlebot/turtlebot
-    version: indigo
+    version: melodic
   turtlebot_create:
     type: git
     url: https://github.com/turtlebot/turtlebot_create
@@ -94,7 +98,7 @@ repositories:
   turtlebot_simulator:
     type: git
     url: https://github.com/turtlebot/turtlebot_simulator
-    version: indigo
+    version: melodic
   xacro:
     type: git
     url: https://github.com/ros/xacro

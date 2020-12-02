@@ -11,7 +11,7 @@
   <arg name="headless" default="false"/>
   <arg name="gui" default="true"/>
   <arg name="world_file"  default="$(env GYM_GAZEBO_WORLD_CIRCLE)"/>
-  <env name="GAZEBO_MODEL_PATH" value="$(env GAZEBO_MODEL_PATH):$(find drcsim_model_resources)/gazebo_models/environments:$(find ardupilot_sitl_gazebo_plugin)/meshes/meshes_sensors:$(find ardupilot_sitl_gazebo_plugin)/meshes/meshes_outdoor:$(find ardupilot_sitl_gazebo_plugin)/meshes/meshes_warehouse"/>
+  <env name="GAZEBO_MODEL_PATH"   value="$(env GAZEBO_MODEL_PATH):$(find drcsim_model_resources)/gazebo_models/environments:$(find ardupilot_sitl_gazebo_plugin)/meshes/meshes_sensors:$(find ardupilot_sitl_gazebo_plugin)/meshes/meshes_outdoor:$(find ardupilot_sitl_gazebo_plugin)/meshes/meshes_warehouse"/>
   <arg name="name" default="erlecopter"/>
   <arg name="model" default="$(find ardupilot_sitl_gazebo_plugin)/urdf/erlecopter_base.xacro"/>
   <arg name="tf_prefix" default="$(optenv ROS_NAMESPACE)"/>
@@ -19,12 +19,12 @@
   <arg name="verbose" default="false"/>
 
   <!-- Initial pose for the drone -->
-  <arg name="x" default="0.0"/> <!-- [m], positive to the North -->
-  <arg name="y" default="0.0"/> <!-- [m], negative to the East -->
-  <arg name="z" default="0.08"/> <!-- [m], positive Up -->
-  <arg name="roll" default="0"/> <!-- [rad] -->
+  <arg name="x"     default="0.0"/> <!-- [m], positive to the North -->
+  <arg name="y"     default="0.0"/> <!-- [m], negative to the East -->
+  <arg name="z"     default="0.08"/> <!-- [m], positive Up -->
+  <arg name="roll"  default="0"/> <!-- [rad] -->
   <arg name="pitch" default="0"/> <!-- [rad] -->
-  <arg name="yaw" default="3.1415"/> <!-- [rad], negative clockwise -->
+  <arg name="yaw"   default="3.1415"/> <!-- [rad], negative clockwise -->
 
   <!-- send the robot XML to param server -->
   <param name="robot_description" command="
@@ -50,10 +50,10 @@
   </node>
   
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="paused" value="true"/>   <!-- value unrelevant due to Arducopter plugin steps --> 
-    <arg name="headless" value="$(arg headless)"/>
-    <arg name="gui" value="$(arg gui)"/>
-    <arg name="world_name" value="$(arg world_file)"/>
-    <arg name="verbose" value="$(arg verbose)"/>
+    <arg name="paused"      value="true"/>   <!-- value unrelevant due to Arducopter plugin steps --> 
+    <arg name="headless"    value="$(arg headless)"/>
+    <arg name="gui"         value="$(arg gui)"/>
+    <arg name="world_name"  value="$(arg world_file)"/>
+    <arg name="verbose"     value="$(arg verbose)"/>
   </include> 
 </launch>

@@ -22,10 +22,10 @@ mkdir -p $src
 cd $src
 catkin_init_workspace
 
-
-# Import and build dependencies
+echo "starts import and build dependencies..."
 cd ../../catkin_ws/src/
 vcs import < ../../gazebo_ros_melodic.repos
+echo "finish import and build dependencies..."
 
 cd ..
 touch catkin_ws/src/ecl_navigation/ecl_mobile_robot/CATKIN_IGNORE
