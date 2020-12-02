@@ -1,7 +1,10 @@
 #!/bin/bash
 
+source /opt/ros/melodic/setup.bash
+
 if [ -z "$ROS_DISTRO" ]; then
   echo "ROS not installed. Check the installation steps: https://github.com/erlerobot/gym#installing-the-gazebo-environment"
+  exit 1
 fi
 
 program="gazebo"
@@ -10,7 +13,7 @@ if [ $condition -eq 0 ] ; then
     echo "Gazebo is not installed. Check the installation steps: https://github.com/erlerobot/gym#installing-the-gazebo-environment"
 fi
 
-source /opt/ros/melodic/setup.bash
+
 
 # Create catkin_ws
 ws="catkin_ws"
@@ -22,13 +25,7 @@ mkdir -p $src
 cd $src
 catkin_init_workspace
 
-echo "starts import and build dependencies..."
-cd ../../catkin_ws/src/
-
-echo "finish import and build dependencies..."
-
-exit 0
-
+mv ../../dependencies/* ./
 cd ..
 touch catkin_ws/src/ecl_navigation/ecl_mobile_robot/CATKIN_IGNORE
 catkin_make
